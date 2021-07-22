@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firebase-template": {
+    "armocromia": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "firebase-template:build"
+            "browserTarget": "armocromia:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "firebase-template:build:production"
+              "browserTarget": "armocromia:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firebase-template:build"
+            "browserTarget": "armocromia:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "firebase-template:serve"
+            "devServerTarget": "armocromia:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "firebase-template:serve:production"
+              "devServerTarget": "armocromia:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "firebase-template",
+  "defaultProject": "armocromia",
   "cli": {
     "analytics": false
   }

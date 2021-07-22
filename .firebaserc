@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "firebase-template"
+    "default": "armocromia",
+    "test": "armocromia-37a8c"
   }
 }

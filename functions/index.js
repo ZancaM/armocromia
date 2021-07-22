@@ -25,4 +25,4 @@ app.use(function (req, res, next) {
 app.use('/foo', fooController);
 
 
-exports.firebaseTemplateAPp = functions.https.onRequest(app);
+exports.armocromiaApp = functions.https.onRequest(app);

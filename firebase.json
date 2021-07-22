@@ -12,11 +12,11 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "firebaseTemplateAPp"
+        "function": "armocromiaApp"
       },
       {
         "source": "/",
-        "function": "firebaseTemplateAPp"
+        "function": "armocromiaApp"
       }
     ]
   }

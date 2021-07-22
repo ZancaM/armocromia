@@ -20,7 +20,7 @@ Just follow the instructions, and you will have a nice starting point for your w
 
 ### RENAMING
 * Search and replace each occurrence of `firebase-template` with `[PROJECT_NAME]` (brutal replacement will work)
-* Search and replace each occurrence of `firebaseTemplateApp` with `[PROJECT_NAME]App` (brutal replacement will work)
+* Search and replace each occurrence of `armocromiaApp` with `[PROJECT_NAME]App` (brutal replacement will work)
 
 ### GOOGLE FIREBASE
 

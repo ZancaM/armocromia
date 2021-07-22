@@ -46,7 +46,7 @@ testem.log
 Thumbs.db
 
 # Log files
-functions/firebase-template-firebase-adminsdk.json
+functions/armocromia-firebase-adminsdk.json
 functions/package-lock.json
 ./package-lock.json
 ./firebase-debug.log
