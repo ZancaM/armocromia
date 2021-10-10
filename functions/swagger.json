@@ -1,0 +1,135 @@
+{
+  "swagger": "2.0",
+  "info": {
+  "version": "1.0.0",
+    "title": "Armocromia",
+    "description": "My User Project Application API",
+    "license": {
+    "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/user/create": {
+      "post": {
+        "tags": ["User"],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/UserReq"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/season": {
+      "post": {
+        "tags": ["Season"],
+        "description": "Get your season",
+        "parameters": [
+          {
+            "name": "image",
+            "in": "body",
+            "description": "Face of the person we want to know the season",
+            "schema": {
+              "$ref": "#/definitions/SeasonReq"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "apiKey",
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/Season"
+            }
+          }
+        }
+      }
+    },
+    "/user/list": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get all users in system",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "UserReq": {
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "SeasonReq": {
+      "properties": {
+        "image": {
+          "type": "string"
+        }
+      }
+    },
+    "Season": {
+      "properties": {
+        "season": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "api_key": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

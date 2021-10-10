@@ -1,14 +1,14 @@
 /* tslint:disable:variable-name */
-import {Deserializable} from './deserializable.dto';
+import { Deserializable } from './deserializable.dto';
 
-export class FooDto implements Deserializable {
+export class UserDto implements Deserializable {
 
   public id: string;
   public created_at: string;
-  public modified_at: string;
-  public name: string;
+  public api_key: string;
+  public usage: [any];
   public email: string;
-  public text: string;
+  public host: string;
 
   deserialize(input: any): this {
     return Object.assign(this, input);
