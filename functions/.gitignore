@@ -1,1 +1,3 @@
 node_modules/
+*-adminsdk.json
+/middleware/superKey.json

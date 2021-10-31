@@ -1,13 +1,18 @@
+const super_key = require('./superKey.json');
 const MAX = process.env.API_MAX || 25;
 
 const validateKey = (req, res, next) => {
   //Where is the API key expected to be?
-  userList = require('../service/user.service').getUserList()
+  let userList = require('../service/user.service').getUserList()
 
   let host = req.headers.origin;
   //let api_key = req.query.api_key; //version 1 with the querystring
   //let api_key = req.params.apikey; //version 2 with the URL params
   let api_key = req.header('x-api-key'); //version 3 using a header
+  if (api_key === super_key.key) {
+    next()
+    return
+  }
   let account = userList.find(
     (user) => user.host == host && user.api_key == api_key
   );
